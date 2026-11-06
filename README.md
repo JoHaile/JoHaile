@@ -1,7 +1,5 @@
 <div align="center">
 
-![Yohannes Haile Banner](assets/banner.png)
-
 # Hey, I'm Yohannes Haile 👋
 
 ### Full-Stack Developer · Next.js · React · TypeScript
