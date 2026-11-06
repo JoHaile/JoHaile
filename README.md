@@ -1,5 +1,7 @@
 <div align="center">
 
+![Yohannes Haile Banner](assets/banner.png)
+
 # Hey, I'm Yohannes Haile 👋
 
 ### Full-Stack Developer · Next.js · React · TypeScript
@@ -112,8 +114,11 @@ JavaFX desktop typing game with real-time speed and accuracy tracking, scoring, 
 
 <div align="center">
 
-![Yohannes's GitHub stats](https://github-readme-stats.vercel.app/api?username=johaile&show_icons=true&theme=tokyonight&hide_border=true)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=johaile&layout=compact&theme=tokyonight&hide_border=true)
+![Profile details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoHaile&theme=tokyonight)
+![GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JoHaile&theme=tokyonight)
+![Top languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=JoHaile&theme=tokyonight)
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=JoHaile&theme=tokyonight&hide_border=true)](https://github.com/JoHaile)
 
 </div>
 
