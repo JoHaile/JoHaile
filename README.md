@@ -1,7 +1,5 @@
 <div align="center">
 
-![Yohannes Haile Banner](assets/banner.png)
-
 # Hey, I'm Yohannes Haile 👋
 
 ### Full-Stack Developer · Next.js · React · TypeScript
@@ -45,51 +43,30 @@ Full-stack developer based in **Addis Ababa, Ethiopia**, with hands-on experienc
 ## 🚀 Featured Projects
 
 ### 🌍 [Enjoy Ethiopia](https://www.enjoyethiopia.com/) · *Live*
-
-![Enjoy Ethiopia](assets/projects/enjoy-ethiopia.png)
-
 Multi-brand tourism and booking platform that consolidates **Travel Ethiopia** and **Enjoy Ethiopia** into one scalable shared system, with end-to-end booking workflows, secure auth with email verification, and a relational data model.
 `Next.js` `TypeScript` `Better Auth` `Prisma` `PostgreSQL` `React Hook Form` `Zod`
 
 ### 🎬 [StreamFlix](https://stream-flix-cinema.vercel.app/) · [Source](https://github.com/JoHaile/stream-flex)
-
-![StreamFlix](assets/projects/streamflix.png)
-
 Movie and TV streaming web app with **room-based virtual cinemas**: multiple users join a shared session with synchronized playback.
 `Next.js` `React` `TypeScript` `Node.js` `Tailwind CSS`
 
 ### 🧠 [Career Guide AI](https://career-guide-ai-nine.vercel.app/) · [Source](https://github.com/JoHaile/career-guide-ai)
-
-![Career Guide AI](assets/projects/career-guide-ai.png)
-
 AI career-planning platform: an AI mentor that maps career paths, finds skill gaps, and runs interactive interview simulations with performance feedback.
 `Next.js` `TypeScript` `LLM Integration` `Python` `Node.js`
 
 ### 💊 [Pharmacy Inventory & Delivery System](https://github.com/JoHaile/pharmacy-inventory-and-delivery) · 🏆 *2nd Place, University of Gondar Hackathon*
-
-![Pharmacy Inventory & Delivery System](assets/projects/pharmacy.png)
-
 Operations dashboard for inventory, order processing, and delivery management with secure auth and a Prisma relational layer.
 `Next.js` `Better Auth` `Prisma` `PostgreSQL` `Tailwind CSS`
 
 ### 🚗 [Car Rental Web App](https://car-rental-puce-ten-74.vercel.app/) · [Source](https://github.com/JoHaile/car-rental)
-
-![Car Rental Web App](assets/projects/car-rental.png)
-
 Reservation and rental platform with role-based access control, automated transactional emails, and real-time rental updates.
 `Next.js` `PostgreSQL` `shadcn/ui` `React Hook Form` `Zod`
 
 ### 🦁 [Obed Temba Tuyumvire](https://obedtemba.vercel.app/) · *Client project*
-
-![Obed Temba Tuyumvire](assets/projects/obed-temba.png)
-
 Conservation and eco-tourism website for a conservation leader in Eastern DRC, featuring tour packages, editorial stories, testimonials, and speaking-inquiry flows.
 `Next.js` `TypeScript` `Tailwind CSS`
 
 ### ⌨️ [Typing Speed Racer](https://github.com/JoHaile/Typing-speed-racer)
-
-![Typing Speed Racer](assets/projects/typing-racer.png)
-
 JavaFX desktop typing game with real-time speed and accuracy tracking, scoring, and gameplay progression.
 `Java` `JavaFX` `OOP`
 
