@@ -111,14 +111,12 @@ async function font(file) {
 
 async function faces(which) {
   const inter = await font("inter-var.woff2");
-  const corm = await font("cormorant-garamond-var.woff2");
-  const cormItalic = await font("cormorant-garamond-italic-var.woff2");
   const face = (family, data, style = "normal", weight = "100 900") =>
     `@font-face{font-family:'${family}';src:url(data:font/woff2;base64,${data}) format('woff2');font-style:${style};font-weight:${weight};`;
   const parts = [face("Inter", inter)];
   if (which === "header") {
-    parts.push(face("Cormorant", corm, "normal", "300 700"));
-    parts.push(face("Cormorant", cormItalic, "italic", "300 700"));
+    const birth = await font("birthstone.woff2");
+    parts.push(face("Birthstone", birth, "normal", "400"));
   }
   return parts.join("");
 }
@@ -160,16 +158,16 @@ async function headerSvg() {
   <circle cx="72" cy="95" r="2" fill="${P.goldLight}" opacity=".55"/>
   <circle cx="1128" cy="95" r="2" fill="${P.goldLight}" opacity=".55"/>
 
-  <text x="600" y="94" text-anchor="middle" fill="url(#gold)"
-        font-family="Cormorant, Georgia, serif" font-size="66" font-weight="600" letter-spacing="1.5">Yohannes Haile</text>
+  <text x="600" y="108" text-anchor="middle" fill="url(#gold)"
+        font-family="Birthstone, 'Brush Script MT', cursive" font-size="78" font-weight="400">Yohannes Haile</text>
 
   <g>
-    <rect x="486" y="116.5" width="98" height="1" fill="url(#rule)"/>
-    <rect x="616" y="116.5" width="98" height="1" fill="url(#rule)"/>
-    <rect x="596" y="113" width="8" height="8" rx="1" transform="rotate(45 600 117)" fill="${P.gold}"/>
+    <rect x="486" y="138.5" width="98" height="1" fill="url(#rule)"/>
+    <rect x="616" y="138.5" width="98" height="1" fill="url(#rule)"/>
+    <rect x="596" y="135" width="8" height="8" rx="1" transform="rotate(45 600 139)" fill="${P.gold}"/>
   </g>
 
-  <text x="600" y="149" text-anchor="middle" fill="${P.muted}"
+  <text x="600" y="168" text-anchor="middle" fill="${P.muted}"
         font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" letter-spacing="4.2">FULL-STACK DEVELOPER · NEXT.JS · REACT · TYPESCRIPT</text>
 </svg>
 `;
@@ -210,19 +208,47 @@ async function statsSvg(d) {
 `;
 }
 
-/* ---------- languages card ---------- */
+/* ---------- languages card (donut) ---------- */
+
+function arcPath(cx, cy, ro, ri, a0, a1) {
+  const s = (a0 - 90) * Math.PI / 180;
+  const e = (a1 - 90) * Math.PI / 180;
+  const x1 = cx + ro * Math.cos(s);
+  const y1 = cy + ro * Math.sin(s);
+  const x2 = cx + ro * Math.cos(e);
+  const y2 = cy + ro * Math.sin(e);
+  const xi1 = cx + ri * Math.cos(e);
+  const yi1 = cy + ri * Math.sin(e);
+  const xi2 = cx + ri * Math.cos(s);
+  const yi2 = cy + ri * Math.sin(s);
+  const large = a1 - a0 > 180 ? 1 : 0;
+  return `M ${x1.toFixed(2)} ${y1.toFixed(2)} A ${ro} ${ro} 0 ${large} 1 ${x2.toFixed(2)} ${y2.toFixed(2)} L ${xi1.toFixed(2)} ${yi1.toFixed(2)} A ${ri} ${ri} 0 ${large} 0 ${xi2.toFixed(2)} ${yi2.toFixed(2)} Z`;
+}
 
 async function languagesSvg(d) {
   const css = await faces("stats");
-  const rows = d.languages
-    .map((lang, i) => {
-      const y = 96 + i * 21;
-      const barY = y - 8;
-      const width = Math.max(4, (lang.pct / 100) * 240);
-      return `<text x="30" y="${y}" fill="${P.ink}" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="500">${esc(lang.name)}</text>
-  <rect x="152" y="${barY}" width="240" height="5" rx="2.5" fill="#E8DFCC"/>
-  <rect x="152" y="${barY}" width="${width.toFixed(1)}" height="5" rx="2.5" fill="${GOLD_RAMP[i % GOLD_RAMP.length]}"/>
-  <text x="465" y="${y}" text-anchor="end" fill="${P.muted}" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600">${lang.pct.toFixed(1)}%</text>`;
+  const langs = d.languages;
+  const slices = [];
+  let acc = 0;
+  langs.forEach((l, i) => {
+    const start = acc;
+    const end = i === langs.length - 1 ? 360 : acc + (l.pct / 100) * 360;
+    slices.push({ ...l, color: GOLD_RAMP[i % GOLD_RAMP.length], start, end });
+    acc = end;
+  });
+
+  const cx = 150, cy = 122, ro = 76, ri = 48;
+  const paths = slices
+    .filter((s) => s.end - s.start > 0.1)
+    .map((s) => `<path d="${arcPath(cx, cy, ro, ri, s.start, s.end)}" fill="${s.color}" stroke="${P.paper}" stroke-width="1.5"/>`)
+    .join("\n  ");
+
+  const legend = langs
+    .map((l, i) => {
+      const y = 86 + i * 22;
+      return `<rect x="262" y="${y - 11}" width="10" height="10" rx="2.5" fill="${GOLD_RAMP[i % GOLD_RAMP.length]}"/>
+  <text x="280" y="${y}" fill="${P.ink}" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="500">${esc(l.name)}</text>
+  <text x="465" y="${y}" text-anchor="end" fill="${P.muted}" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600">${l.pct.toFixed(1)}%</text>`;
     })
     .join("\n  ");
 
@@ -237,7 +263,10 @@ async function languagesSvg(d) {
   <text x="30" y="43" fill="${P.gold}" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2.6">TOP LANGUAGES</text>
   <text x="465" y="43" text-anchor="end" fill="${P.muted}" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="500" letter-spacing="1.6">BY CODE VOLUME</text>
   <rect x="30" y="60.5" width="435" height="1" fill="${P.line}"/>
-  ${rows}
+  ${paths}
+  <text x="${cx}" y="${cy - 2}" text-anchor="middle" fill="${P.gold}" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600">${langs.length}</text>
+  <text x="${cx}" y="${cy + 15}" text-anchor="middle" fill="${P.muted}" font-family="Inter, system-ui, sans-serif" font-size="8.5" font-weight="600" letter-spacing="2">LANGS</text>
+  ${legend}
 </svg>
 `;
 }
