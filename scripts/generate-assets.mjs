@@ -135,6 +135,35 @@ const P = {
 
 const GOLD_RAMP = ["#A8863C", "#BD9E55", "#CDB273", "#D9C69A", "#E5D7B8", "#EEE4CF"];
 
+// GitHub's official language colors (https://github.com/ozh/github-colors)
+const LANG_COLORS = {
+  TypeScript: "#3178C6",
+  JavaScript: "#F7DF1E",
+  CSS: "#563D7C",
+  Java: "#B07219",
+  "Jupyter Notebook": "#DA5B0B",
+  HTML: "#E34F26",
+  Python: "#3572A5",
+  Go: "#00ADD8",
+  Rust: "#DEA584",
+  C: "#555555",
+  "C++": "#F34B7D",
+  "C#": "#178600",
+  PHP: "#4F5D95",
+  Ruby: "#701516",
+  Swift: "#F05138",
+  Kotlin: "#A97BFF",
+  Dart: "#00B4AB",
+  Vue: "#41B883",
+  Shell: "#89E051",
+  SQL: "#E38C00",
+  Markdown: "#083FA1",
+  JSON: "#292929",
+};
+function langColor(name) {
+  return LANG_COLORS[name] || "#A8863C";
+}
+
 /* ---------- header ---------- */
 
 async function headerSvg() {
@@ -233,7 +262,7 @@ async function languagesSvg(d) {
   langs.forEach((l, i) => {
     const start = acc;
     const end = i === langs.length - 1 ? 360 : acc + (l.pct / 100) * 360;
-    slices.push({ ...l, color: GOLD_RAMP[i % GOLD_RAMP.length], start, end });
+    slices.push({ ...l, color: langColor(l.name), start, end });
     acc = end;
   });
 
@@ -246,7 +275,7 @@ async function languagesSvg(d) {
   const legend = langs
     .map((l, i) => {
       const y = 86 + i * 22;
-      return `<rect x="262" y="${y - 11}" width="10" height="10" rx="2.5" fill="${GOLD_RAMP[i % GOLD_RAMP.length]}"/>
+      return `<rect x="262" y="${y - 11}" width="10" height="10" rx="2.5" fill="${langColor(langs[i].name)}"/>
   <text x="280" y="${y}" fill="${P.ink}" font-family="Inter, system-ui, sans-serif" font-size="11.5" font-weight="500">${esc(l.name)}</text>
   <text x="465" y="${y}" text-anchor="end" fill="${P.muted}" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600">${l.pct.toFixed(1)}%</text>`;
     })
