@@ -40,33 +40,67 @@ Full-stack developer based in **Addis Ababa, Ethiopia**, with hands-on experienc
 
 ## 🚀 Featured Projects
 
-### 🌍 [Enjoy Ethiopia](https://www.enjoyethiopia.com/) · *Live*
-Multi-brand tourism and booking platform that consolidates **Travel Ethiopia** and **Enjoy Ethiopia** into one scalable shared system, with end-to-end booking workflows, secure auth with email verification, and a relational data model.
-`Next.js` `TypeScript` `Better Auth` `Prisma` `PostgreSQL` `React Hook Form` `Zod`
+A selection of products and applications I've built — from production platforms to AI-powered tools.
 
-### 🎬 [StreamFlix](https://stream-flix-cinema.vercel.app/) · [Source](https://github.com/JoHaile/stream-flex)
-Movie and TV streaming web app with **room-based virtual cinemas**: multiple users join a shared session with synchronized playback.
-`Next.js` `React` `TypeScript` `Node.js` `Tailwind CSS`
-
-### 🧠 [Career Guide AI](https://career-guide-ai-nine.vercel.app/) · [Source](https://github.com/JoHaile/career-guide-ai)
-AI career-planning platform: an AI mentor that maps career paths, finds skill gaps, and runs interactive interview simulations with performance feedback.
-`Next.js` `TypeScript` `LLM Integration` `Python` `Node.js`
-
-### 💊 [Pharmacy Inventory & Delivery System](https://github.com/JoHaile/pharmacy-inventory-and-delivery) · 🏆 *2nd Place, University of Gondar Hackathon*
-Operations dashboard for inventory, order processing, and delivery management with secure auth and a Prisma relational layer.
-`Next.js` `Better Auth` `Prisma` `PostgreSQL` `Tailwind CSS`
-
-### 🚗 [Car Rental Web App](https://car-rental-puce-ten-74.vercel.app/) · [Source](https://github.com/JoHaile/car-rental)
-Reservation and rental platform with role-based access control, automated transactional emails, and real-time rental updates.
-`Next.js` `PostgreSQL` `shadcn/ui` `React Hook Form` `Zod`
-
-### 🦁 [Obed Temba Tuyumvire](https://obedtemba.vercel.app/) · *Client project*
-Conservation and eco-tourism website for a conservation leader in Eastern DRC, featuring tour packages, editorial stories, testimonials, and speaking-inquiry flows.
-`Next.js` `TypeScript` `Tailwind CSS`
-
-### ⌨️ [Typing Speed Racer](https://github.com/JoHaile/Typing-speed-racer)
-JavaFX desktop typing game with real-time speed and accuracy tracking, scoring, and gameplay progression.
-`Java` `JavaFX` `OOP`
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🌍 <a href="https://www.enjoyethiopia.com/">Enjoy Ethiopia</a></h3>
+      <p><strong>🟢 LIVE</strong> · Tourism &amp; booking platform</p>
+      <p>A multi-brand tourism platform bringing <strong>Travel Ethiopia</strong> and <strong>Enjoy Ethiopia</strong> together in one shared system. Features end-to-end booking workflows, email-verified authentication, and a relational data model.</p>
+      <p><a href="https://www.enjoyethiopia.com/">Explore live platform ↗</a></p>
+      <p><code>Next.js</code> <code>TypeScript</code> <code>Better Auth</code> <code>Prisma</code> <code>PostgreSQL</code> <code>React Hook Form</code> <code>Zod</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎬 <a href="https://stream-flix-cinema.vercel.app/">StreamFlix</a></h3>
+      <p><strong>🟢 LIVE</strong> · Streaming &amp; virtual cinema</p>
+      <p>A movie and TV streaming app with room-based virtual cinemas. Friends can join a shared room and watch together with synchronized playback.</p>
+      <p><a href="https://stream-flix-cinema.vercel.app/">Watch the app ↗</a> · <a href="https://github.com/JoHaile/stream-flex">Source code ↗</a></p>
+      <p><code>Next.js</code> <code>React</code> <code>TypeScript</code> <code>Node.js</code> <code>Tailwind CSS</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧠 <a href="https://career-guide-ai-nine.vercel.app/">Career Guide AI</a></h3>
+      <p><strong>🤖 AI PRODUCT</strong> · Career planning &amp; interview practice</p>
+      <p>An AI career mentor that helps users explore career paths, identify skill gaps, and practice interviews through interactive simulations with performance feedback.</p>
+      <p><a href="https://career-guide-ai-nine.vercel.app/">Try the app ↗</a> · <a href="https://github.com/JoHaile/career-guide-ai">Source code ↗</a></p>
+      <p><code>Next.js</code> <code>TypeScript</code> <code>LLM Integration</code> <code>Python</code> <code>Node.js</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>💊 <a href="https://github.com/JoHaile/pharmacy-inventory-and-delivery">Pharmacy Inventory &amp; Delivery System</a></h3>
+      <p><strong>🏆 2ND PLACE</strong> · University of Gondar Hackathon</p>
+      <p>An operations dashboard for managing pharmacy inventory, processing orders, and coordinating deliveries, supported by secure authentication and a relational data layer.</p>
+      <p><a href="https://github.com/JoHaile/pharmacy-inventory-and-delivery">Explore source code ↗</a></p>
+      <p><code>Next.js</code> <code>Better Auth</code> <code>Prisma</code> <code>PostgreSQL</code> <code>Tailwind CSS</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🚗 <a href="https://car-rental-puce-ten-74.vercel.app/">Car Rental Web App</a></h3>
+      <p><strong>🟢 LIVE</strong> · Rental &amp; reservation platform</p>
+      <p>A car rental platform with reservation workflows, role-based access control, automated transactional emails, and real-time rental updates.</p>
+      <p><a href="https://car-rental-puce-ten-74.vercel.app/">Explore live app ↗</a> · <a href="https://github.com/JoHaile/car-rental">Source code ↗</a></p>
+      <p><code>Next.js</code> <code>PostgreSQL</code> <code>shadcn/ui</code> <code>React Hook Form</code> <code>Zod</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🦁 <a href="https://obedtemba.vercel.app/">Obed Temba Tuyumvire</a></h3>
+      <p><strong>🤝 CLIENT PROJECT</strong> · Conservation &amp; eco-tourism</p>
+      <p>A website for a conservation leader in Eastern DRC, featuring tour packages, editorial stories, testimonials, and speaking-inquiry flows.</p>
+      <p><a href="https://obedtemba.vercel.app/">Visit live website ↗</a></p>
+      <p><code>Next.js</code> <code>TypeScript</code> <code>Tailwind CSS</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <h3>⌨️ <a href="https://github.com/JoHaile/Typing-speed-racer">Typing Speed Racer</a></h3>
+      <p><strong>🖥️ DESKTOP APP</strong> · JavaFX typing game</p>
+      <p>A desktop typing game featuring real-time speed and accuracy tracking, scoring, and progressive gameplay.</p>
+      <p><a href="https://github.com/JoHaile/Typing-speed-racer">Explore source code ↗</a></p>
+      <p><code>Java</code> <code>JavaFX</code> <code>Object-Oriented Programming</code></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
