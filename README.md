@@ -1,8 +1,6 @@
 <div align="center">
 
-# Hey, I'm Yohannes Haile 👋
-
-### Full-Stack Developer · Next.js · React · TypeScript
+<img src="assets/header.svg" width="100%" alt="Yohannes Haile — Full-Stack Developer · Next.js · React · TypeScript" />
 
 **I build production-ready web apps, booking systems, and AI solutions.**
 
@@ -112,11 +110,7 @@ JavaFX desktop typing game with real-time speed and accuracy tracking, scoring, 
 
 <div align="center">
 
-![Profile details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoHaile&theme=tokyonight)
-![GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=JoHaile&theme=tokyonight)
-![Top languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=JoHaile&theme=tokyonight)
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=JoHaile&theme=tokyonight&hide_border=true)](https://github.com/JoHaile)
+<img src="assets/stats/github-stats.svg" width="49%" alt="GitHub stats: commits, stars, pull requests and repositories" /> <img src="assets/stats/top-languages.svg" width="49%" alt="Top languages by code volume" />
 
 </div>
 
